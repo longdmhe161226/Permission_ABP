@@ -25,8 +25,8 @@
 - **Trong trường hợp muốn check permission trong một block code(ví dụ: method) để lấy làm điều kiện thực thi thì phải inject IAuthorizationService và sử dụng như sau:**
 		***Insert hình***
   - Trong trường hợp này:
-      - IsGrantedAsync kiểm tra quyền hạn được cung cấp và trả về true nếu user hiện tại đã được cấp quyền hạn hiện tại. (Tiện cho việc custom logic trong các trường hợp phân quyền)
-	    - CheckAsync ném một ngoại lệ AbpAuthorizationException nếu user không có quyền thực hiện thao tác đó.(Được xử lý bởi ABP trả về response HTTP cho phía client)
+	- IsGrantedAsync kiểm tra quyền hạn được cung cấp và trả về true nếu user hiện tại đã được cấp quyền hạn hiện tại. (Tiện cho việc custom logic trong các trường hợp phân quyền)
+	- CheckAsync ném một ngoại lệ AbpAuthorizationException nếu user không có quyền thực hiện thao tác đó.(Được xử lý bởi ABP trả về response HTTP cho phía client)
 
 ### 3.2 Bên phía Client: 
 - **Tùy thuộc vào Client khác nhau thì sẽ có các service khác nhau để check permission.**
